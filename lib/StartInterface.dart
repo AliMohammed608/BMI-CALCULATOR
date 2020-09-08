@@ -4,12 +4,14 @@ import 'About.dart';
 import 'BMI.dart';
 import 'WaterPercentage.dart';
 
+//Start Interface(HomePage)
 class StartInterface extends StatelessWidget {
   StartInterface({
     Key key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    //queryData for supporting different screen sizes
     MediaQueryData queryData;
     queryData = MediaQuery.of(context);
     return Scaffold(
@@ -23,6 +25,7 @@ class StartInterface extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
+		//Container with App Logo
                 new Container(
                   alignment: Alignment.topCenter,
                   margin: EdgeInsets.all(0),
@@ -57,6 +60,7 @@ class StartInterface extends StatelessWidget {
                 SizedBox(
                   height: 50.0,
                 ),
+		//Button transfer to watterPercentage Page
                 SizedBox(
                   width: queryData.size.width * 0.50,
                   height: 60,
@@ -87,6 +91,7 @@ class StartInterface extends StatelessWidget {
                 SizedBox(
                   height: 26.0,
                 ),
+		//Button transfer to BMI calculator Page
                 SizedBox(
                   width: queryData.size.width * 0.50,
                   height: 60,
@@ -116,6 +121,7 @@ class StartInterface extends StatelessWidget {
                 SizedBox(
                   height: 26.0,
                 ),
+		//Button transfer to About Page
                 SizedBox(
                   width: queryData.size.width * 0.50,
                   height: 60,

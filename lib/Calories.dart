@@ -6,6 +6,7 @@ import 'BMI.dart';
 import 'StartInterface.dart';
 import 'WaterPercentage.dart';
 
+//Calculate calories page
 class calories extends StatefulWidget {
   @override
   _caloriesState createState() => _caloriesState();
@@ -35,6 +36,7 @@ class _caloriesState extends State<calories> {
   String result3;
   @override
   Widget build(BuildContext context) {
+//Different screen size handler
     MediaQueryData queryData;
     queryData = MediaQuery.of(context);
     return Scaffold(
@@ -156,6 +158,7 @@ class _caloriesState extends State<calories> {
                       ),
                     ),
                   ),
+		//List the daily activity average
                   DropDownField(
                     controller: selectedCounsellor,
                     hintText: "اختر مستوى النشاط اليومي",
@@ -171,6 +174,7 @@ class _caloriesState extends State<calories> {
                   SizedBox(
                     height: 30.0,
                   ),
+		//Take the weight of the user
                   TextField(
                     decoration: InputDecoration(labelText: 'الوزن'),
                     keyboardType: TextInputType.number,
@@ -179,6 +183,7 @@ class _caloriesState extends State<calories> {
                   SizedBox(
                     height: 10.0,
                   ),
+		//Print the calories
                   Text(
                     'سعراتك الحرارية, $r',
                     style: TextStyle(
@@ -193,6 +198,7 @@ class _caloriesState extends State<calories> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
+			//Calculate calorie button
                       SizedBox(
                         width: queryData.size.width * 0.35,
                         height: 60,
@@ -229,6 +235,7 @@ class _caloriesState extends State<calories> {
                       SizedBox(
                         width: 10,
                       ),
+			//Reset button
                       SizedBox(
                         width: queryData.size.width * 0.35,
                         height: 60,
@@ -265,6 +272,7 @@ class _caloriesState extends State<calories> {
                   SizedBox(
                     height: 80,
                   ),
+		//Print three lines to what to do
                   Text(
                     '$increase',
                     style: TextStyle(
@@ -296,6 +304,7 @@ class _caloriesState extends State<calories> {
     );
   }
 
+//provide const values based on daily activity that choosen from the list
   _clc(selectedCounsellor) {
     result = selectedCounsellor.text;
     if (result == 'منخفض') {

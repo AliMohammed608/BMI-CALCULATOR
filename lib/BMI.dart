@@ -7,6 +7,7 @@ import 'Calories.dart';
 import 'StartInterface.dart';
 import 'WaterPercentage.dart';
 
+//BMI Calculater page
 class BMI extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -31,6 +32,7 @@ class _MyHomePageState extends State<BMI> {
   String button = '';
   @override
   Widget build(BuildContext context) {
+	//Different screen size handler
     MediaQueryData queryData;
     queryData = MediaQuery.of(context);
     return Scaffold(
@@ -150,6 +152,7 @@ class _MyHomePageState extends State<BMI> {
                   SizedBox(
                     height: 50.0,
                   ),
+		//Take tall of the user
                   TextField(
                     decoration: InputDecoration(labelText: 'الطول'),
                     keyboardType: TextInputType.number,
@@ -158,6 +161,7 @@ class _MyHomePageState extends State<BMI> {
                   SizedBox(
                     height: 30.0,
                   ),
+		//Take wight of the user
                   TextField(
                     decoration: InputDecoration(
                       labelText: 'الوزن',
@@ -168,6 +172,7 @@ class _MyHomePageState extends State<BMI> {
                   SizedBox(
                     height: 10.0,
                   ),
+		//print the BMI
                   Text(
                     'كتلة جسمك هي, $r',
                     style: TextStyle(
@@ -182,6 +187,7 @@ class _MyHomePageState extends State<BMI> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
+			//Calculate BMI Button
                       SizedBox(
                         width: queryData.size.width * 0.35,
                         height: 60,
@@ -218,6 +224,7 @@ class _MyHomePageState extends State<BMI> {
                       SizedBox(
                         width: 10,
                       ),
+			//Reset button
                       SizedBox(
                         width: queryData.size.width * 0.35,
                         height: 60,
@@ -254,6 +261,7 @@ class _MyHomePageState extends State<BMI> {
                   SizedBox(
                     height: 35,
                   ),
+		//Print your wight status
                   Text(
                     '$yourWeight',
                     textAlign: TextAlign.center,
@@ -271,6 +279,7 @@ class _MyHomePageState extends State<BMI> {
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
+			//print question ask if want to calculate his calories
                         Text(
                           '$q',
                           textAlign: TextAlign.center,
@@ -281,7 +290,8 @@ class _MyHomePageState extends State<BMI> {
                             color: Color(0xff000000),
                           ),
                         ),
-                        GestureDetector(
+			//Text with lint to calculate calorie page
+                        GestureDeteor(
                           onTap: () {
                             Navigator.push(
                                 context,
@@ -312,7 +322,7 @@ class _MyHomePageState extends State<BMI> {
     // TODO: implement createState
     throw UnimplementedError();
   }
-
+//Function that print result of the user weight status
   _getResult(r) {
     double rr = double.parse(r);
     if (rr >= 40) {

@@ -4,9 +4,11 @@ import 'BMI.dart';
 import 'StartInterface.dart';
 import 'WaterPercentage.dart';
 
+//About page
 class About extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+//Different screen size handler
     MediaQueryData queryData;
     queryData = MediaQuery.of(context);
     return Scaffold(
@@ -117,6 +119,7 @@ class About extends StatelessWidget {
                   SizedBox(
                     height: 50,
                   ),
+		//Print the title
                   new Text(
                     "برنامج حساب BMI",
                     style: TextStyle(

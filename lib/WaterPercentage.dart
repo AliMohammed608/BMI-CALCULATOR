@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'About.dart';
 import 'BMI.dart';
 import 'StartInterface.dart';
-
+//Caculate daily needed water page
 class WaterPercentage extends StatefulWidget {
   _WaterPercentageState createState() => _WaterPercentageState();
 }
@@ -21,11 +21,13 @@ class _WaterPercentageState extends State<WaterPercentage> {
   String result3;
   @override
   Widget build(BuildContext context) {
+    //Different screen sizes handler
     MediaQueryData queryData;
     queryData = MediaQuery.of(context);
     return Scaffold(
       backgroundColor: const Color(0xffd3d3d3),
-      appBar: AppBar(
+    
+  appBar: AppBar(
         backgroundColor: Color(0xFF0F0D4B),
         leading: IconButton(
           alignment: Alignment.centerRight,
@@ -140,6 +142,7 @@ class _WaterPercentageState extends State<WaterPercentage> {
                   SizedBox(
                     height: 50.0,
                   ),
+		  //Take wight of the user
                   TextField(
                     decoration: InputDecoration(labelText: 'الوزن'),
                     keyboardType: TextInputType.number,
@@ -148,6 +151,7 @@ class _WaterPercentageState extends State<WaterPercentage> {
                   SizedBox(
                     height: 10.0,
                   ),
+		//Print the water percentage by Liter
                   Text(
                     'الأحتياج اليومي باللتر, $r',
                     style: TextStyle(
@@ -162,6 +166,7 @@ class _WaterPercentageState extends State<WaterPercentage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
+			//Calculate the water percentage button
                       SizedBox(
                         width: queryData.size.width * 0.35,
                         height: 60,
@@ -196,6 +201,7 @@ class _WaterPercentageState extends State<WaterPercentage> {
                       SizedBox(
                         width: 10,
                       ),
+			//Reset all page button
                       SizedBox(
                         width: queryData.size.width * 0.35,
                         height: 60,
