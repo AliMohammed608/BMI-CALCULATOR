@@ -1,6 +1,6 @@
 # bmicalculator
 
-A new Flutter application.
+A mobile application that allows the user to calculate his daily needed of watter, BMI, and Calories.
 
 ## Getting Started
 
